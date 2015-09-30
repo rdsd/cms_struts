@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts> 
+    <constant name="struts.custom.i18n.resources"	value="ApplicationResources" />
+    <package name="default" extends="struts-default">  
+	<action name="addCourse" class="com.cms.actions.AddCourseAction" method="addCourse" >
+	<result name="Success">/courseAdded.jsp</result>
+	<result name="Error">/error.jsp</result>
+	<result name="input">/addCourse.jsp</result>
+	</action>
+	
+	<action name="retrieveCourse" class="com.cms.actions.RetrieveAction" method="getCourseDetails" >
+	<result name="courseVO">/courseDetails.jsp</result>
+	<result name="Error">/error.jsp</result>
+	<result name="input">/retrieveCourse.jsp</result>
+	</action>
+	
+</package> 
+</struts>
